@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style and fashion</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/galery.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/substitution.css">
+    <link rel="icon" type="image/png" href="images/logo/logo2.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts/gallery.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="burger" id="burger">&#9776;</div>
+          <a href="index.html" class="logo">
+            <img src="images/logo/logo2.png" alt="Стиль & Мода" class="logo-image">
+            <span class="logo-text">Стиль & Мода</span>
+          </a>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="brand.html">Бренди</a></li>
+            <li><a href="gallery.html">Галереря</a></li>
+            <li><a href="#aboutus">Про нас</a></li>
+          </ul>
+          <a href="tel:+380000000000" class="phone-icon" id="phoneIcon">&#9743;</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 🖼️ ГАЛЕРЕЯ БРЕНДУ -->
+    <section class="brand-gallery">
+      <div class="brand-header">
+        <img src="images/brands/kapsova.jpg" alt="Kapsova Logo" class="brand-logo">
+        <h2 class="brand-title">Колекція від Kapsova</h2>
+      </div>
+
+      <div class="gallery-filter-buttons">
+        <button data-category="all" class="active">Усе</button>
+        <button data-category="Blouses_shirts">Блузки & Сорочки</button>
+        <button data-category="Bussines">Бізнес стиль</button>
+        <button data-category="dresses">Сукні</button>
+        <button data-category="pullovers">Пуловери</button>
+        <button data-category="sportswear">Спортивний одяг</button>
+        <button data-category="Swiftshots">Світшоти</button>
+        <button data-category="T-shirts_Polos">Футболки & Поло</button>
+      </div>
+
+      <section class="slider-section">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/galery/1.jpg" alt="1"></div>
+            <div class="swiper-slide"><img src="images/galery/2.jpg" alt="2"></div>
+            <div class="swiper-slide"><img src="images/galery/3.jpg" alt="3"></div>
+            <div class="swiper-slide"><img src="images/galery/4.jpg" alt="4"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer" id="contact">
+      <p>Зв’яжіться з нами: <a href="tel:+380970000000">+380970000000</a></p>
+    </footer>
+  </body>
+</html>
