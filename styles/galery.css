@@ -11,7 +11,7 @@
 }
 
 .swiper-slide {
-  aspect-ratio: 2.5 / 3;
+  aspect-ratio: 2.3 / 3;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -125,4 +125,36 @@
   font-weight: 700;
   color: #4b2db3;
   text-align: center;
+}
+
+/* === Адаптація меню === */
+.gallery-filter-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  padding: 30px 20px 10px;
+  background: #fff;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-filter-buttons button {
+  padding: 10px 14px;
+  border: none;
+  background-color: #ece9f9;
+  color: #4b2db3;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.gallery-filter-buttons button.active,
+.gallery-filter-buttons button:hover {
+  background-color: #4b2db3;
+  color: white;
 }

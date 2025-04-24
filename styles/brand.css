@@ -1,80 +1,254 @@
+/* Основна структура картки бренду */
 .brand-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; /* ОЦЕ ГОЛОВНЕ */
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 40px 30px;
+  padding: 40px;
   margin: 30px auto;
   max-width: 1000px;
-  text-align: center;
-  transition: all 0.3s ease;
+  gap: 40px;
 }
 
-.brand-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+/* Реверсивне розміщення для бренду з логотипом справа */
+.brand-card.reverse {
+  flex-direction: row-reverse;
 }
 
+/* Логотип бренду */
 .brand-logo {
-  max-width: 220px;
+  max-width: 240px;
   height: auto;
-  margin-bottom: 20px;
+  display: block;
+  border-radius: 12px;
 }
 
+/* Блок логотипу — центрований по вертикалі і горизонталі */
+.brand-logo-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+}
+
+/* Темний фон для логотипа KENT&AVER */
+.brand-card.reverse .brand-logo-block {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Контент бренду */
+.brand-content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Внутрішній блок для обмеження ширини тексту */
+.brand-inner {
+  max-width: 540px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Заголовок по центру */
 .brand-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #333;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  width: 100%;
+  text-align: center;
   margin-bottom: 20px;
 }
 
+/* Підзаголовки */
 .brand-subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  color: #5d3db4;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4b2db3;
   margin-top: 30px;
   margin-bottom: 15px;
 }
 
+/* Опис */
 .brand-description {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
-  line-height: 1.8;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Список */
+.brand-list {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  list-style-position: inside;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .brand-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .brand-logo-block {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .brand-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-inner {
+    max-width: 100%;
+  }
+
+  .brand-subtitle,
+  .brand-description,
+  .brand-list {
+    text-align: left;
+  }
+}
+
+
+/* 📸 Обтікання логотипа текстом */
+.brand-flow .brand-logo-float {
+  float: left;
+  width: 240px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+.brand-flow .brand-logo-float img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* 📱 Адаптив для float */
+@media (max-width: 768px) {
+  .brand-flow .brand-logo-float {
+    float: none;
+    width: 100%;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .brand-flow .brand-logo-float img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+.brand-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 1000px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Логотип обтікається */
+.brand-logo-float {
+  float: left;
+  width: 220px;
+  margin: 0 25px 10px 0;
+}
+
+.brand-logo-float img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Заголовок + вступний текст */
+.brand-text-flow {
+  overflow: hidden;
+}
+
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin: 0 0 15px;
+}
+
+.brand-description-intro {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+/* Підзаголовки та основний текст */
+.brand-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4b2db3;
+  margin: 30px 0 15px;
+}
+
+.brand-description,
+.brand-list {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .brand-list {
-  text-align: left;
-  display: inline-block;
-  margin: 0 auto;
   padding-left: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.8;
 }
 
-.brand-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 40px 30px;
-  margin: 30px auto;
-  max-width: 1000px;
-  text-align: center;
-  transition: all 0.6s ease;
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.3s;
+/* Адаптив */
+@media (max-width: 768px) {
+  .brand-logo-float {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  .brand-logo-float img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .brand-title,
+  .brand-description-intro,
+  .brand-subtitle,
+  .brand-description {
+    text-align: center;
+  }
+
+  .brand-list {
+    text-align: left;
+  }
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
