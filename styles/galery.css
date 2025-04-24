@@ -1,0 +1,128 @@
+.slider-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.swiper-slide {
+  aspect-ratio: 2.5 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.swiper-slide:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.03);
+}
+
+/* === КАСТОМНІ СТРІЛКИ === */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: none;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next {
+  right: -25px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%234b2db3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 5l7 7-7 7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.swiper-button-prev {
+  left: -25px;
+  background-image: url("data:image/svg+xml,%3Csvg fill='none' stroke='%234b2db3' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 19l-7-7 7-7'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px 20px 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gallery-filter-buttons button {
+  padding: 10px 18px;
+  border: none;
+  background-color: #ece9f9;
+  color: #4b2db3;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.gallery-filter-buttons button.active,
+.gallery-filter-buttons button:hover {
+  background-color: #4b2db3;
+  color: white;
+}
+
+.swiper-slide:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.swiper-slide img {
+  user-select: none;
+  pointer-events: none;
+}
+
+/* === Логотип === */
+.brand-header {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.brand-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.brand-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4b2db3;
+  text-align: center;
+}
